@@ -1,0 +1,22 @@
+<ion-header>
+  
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="dismiss()">Cancel</ion-button>
+    </ion-buttons>
+    <ion-title>test-modal</ion-title>
+  </ion-toolbar>
+
+  <ion-toolbar>
+    <ion-button [routerLink]="subview1">Subview 1</ion-button>
+    <ion-button routerLink="subview2">Subview 2</ion-button>
+    <ion-button routerLink="subview3">Subview 3</ion-button>
+    <ion-button routerLink="['', {outlets:{subviews:'subview1' } } ]">subviews:Subview 1</ion-button>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+  <!-- <ion-router-outlet name="subviews"></ion-router-outlet> -->
+  <ion-nav #mySubNav [root]="rootPage"></ion-nav>
+</ion-content>
