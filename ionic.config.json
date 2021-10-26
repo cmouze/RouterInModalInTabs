@@ -1,0 +1,7 @@
+{
+  "name": "RouterInModalInTabs",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
