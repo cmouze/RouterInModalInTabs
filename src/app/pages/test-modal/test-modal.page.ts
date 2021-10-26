@@ -9,33 +9,16 @@ import { Subview2Page } from '../subviews/subview2/subview2.page';
   styleUrls: ['./test-modal.page.scss'],
 })
 export class TestModalPage implements OnInit {
-  @ViewChild('mySubNav', {static: true}) myNav: IonNav;
-  private rootPage;
-  private rootParams; 
 
-  constructor(public modalCtrl: ModalController,
-              private navCtrl: NavController) {
-    this.rootPage = Subview1Page;
-    this.rootParams = {
-     // any parameters to pass to the component
-    };
+  constructor(public modalCtrl: ModalController) {
+
   }
 
   ngOnInit() {
-    this.myNav.setRoot(this.rootPage, this.rootParams);
   }
 
   dismiss(data?: any) {
     this.modalCtrl.dismiss(data);
   }
-
-  private pushToNav() {
-    this.myNav.push(Subview2Page, {ninjaName: 'Alpha'});
-   }
-
-  private popFromNav() {
-    this.myNav.pop();
-  }
-
 
 }
