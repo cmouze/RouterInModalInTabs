@@ -8,14 +8,28 @@
   </ion-toolbar>
 
   <ion-toolbar>
-    <ion-button [routerLink]="subview1">Subview 1</ion-button>
-    <ion-button routerLink="subview2">Subview 2</ion-button>
-    <ion-button routerLink="subview3">Subview 3</ion-button>
-    <ion-button routerLink="['', {outlets:{subviews:'subview1' } } ]">subviews:Subview 1</ion-button>
+
+    <ion-nav-link router-direction="forward">
+    <ion-button color="success" (click)="goForward('subview1')">
+      Go to level subview1
+    </ion-button>
+  </ion-nav-link>
+  <ion-nav-link router-direction="forward">
+    <ion-button color="success" (click)="goForward('subview2')">
+      Go to level subview2
+    </ion-button>
+  </ion-nav-link>
+  <ion-nav-link router-direction="forward">
+    <ion-button color="success" (click)="goForward('subview3')">
+      Go to level subview3
+    </ion-button>
+  </ion-nav-link>
+  
   </ion-toolbar>
 
 </ion-header>
 
 <ion-content>
-  <ion-router-outlet name="subviews"></ion-router-outlet>
+  <!-- <ion-router-outlet name="subviews"></ion-router-outlet> -->
+  <ion-nav #nav [root]="rootPage"></ion-nav>
 </ion-content>

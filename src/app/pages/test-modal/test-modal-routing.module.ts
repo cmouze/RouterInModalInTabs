@@ -9,24 +9,7 @@ import { TestModalPage } from './test-modal.page';
 const routes: Routes = [
   {
     path: '',
-    component: TestModalPage,
-    children: [
-      {
-        path:'subview1',
-        component:Subview1Page,
-        outlet:'subviews'
-      },
-      {
-        path:'subview2',
-        component:Subview2Page,
-        outlet:'subviews'
-      },
-      {
-        path:'subview3',
-        component:Subview3Page,
-        outlet:'subviews'
-      }
-    ]
+    component: TestModalPage
   }
 ];
 
